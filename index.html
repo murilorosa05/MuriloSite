@@ -118,6 +118,7 @@
                 src="public/qrcode-pix-400h.png"
                 data-thq-animate-on-reveal="true"
                 class="home-image2"
+                onclick="copiarTexto()"
               />
             </animate-on-reveal>
           </div>
@@ -129,7 +130,7 @@
           <div class="home-footer">
             <div class="home-social-links">
               <a
-                href="https://twitter.com/oi"
+                href="https://instagram.com/cristiano"
                 target="_blank"
                 rel="noreferrer noopener"
                 class="home-link5"
@@ -141,7 +142,7 @@
                 </svg>
               </a>
               <a
-                href="https://facebook.com/oii"
+                href="https://instagram.com/cristiano"
                 target="_blank"
                 rel="noreferrer noopener"
                 class="home-link6"
@@ -185,5 +186,23 @@
       defer=""
       src="https://unpkg.com/@teleporthq/react-components/dist/animate-on-reveal.umd.js"
     ></script>
+    <script>
+      function copiarTexto() {
+        const texto = "054b7fcd-58a0-4225-8f67-8fa64206f3ad";
+
+        // Cria um elemento de input temporário
+        const tempInput = document.createElement("input");
+        tempInput.value = texto;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); // para dispositivos móveis
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+
+        alert("CHAVE PIX COPIADA!!!");
+  }
+</script>
+
+    
   </body>
 </html>
